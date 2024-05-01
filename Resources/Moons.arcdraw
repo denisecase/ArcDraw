@@ -1,0 +1,95 @@
+{
+  "id": "00000000-0000-0000-0000-000000000003",
+  "pictureName": "Moons",
+  "pictureDescription": "Generates a picture of showing phases of the moon.",
+  "author": "Bruce Johnson",
+  "imageWidth": 533,
+  "imageHeight": 533,
+  "curves": [
+    {
+      "num": 1,
+      "name": "Moon Curve 1",
+      "description": "Moon 1",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "90"},
+        {"num": 2, "x": "90+83", "y": "162"},
+        {"num": 3, "x": "88+83", "y": "90"}
+      ],
+      "startAngle": 0,
+      "endAngle": 90,
+      "isClockwise": true
+    },
+    {
+      "num": 2,
+      "name": "Moon Curve 2",
+      "description": "Moon 2",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "90"},
+        {"num": 2, "x": "270+83", "y": "162"}
+      ],
+      "startAngle": 0,
+      "endAngle": 90,
+      "isClockwise": true
+    },
+    {
+      "num": 3,
+      "name": "Moon Curve 3",
+      "description": "Moon 3",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "90"},
+        {"num": 2, "x": "270+83", "y": "162"}
+      ],
+      "startAngle": 225,
+      "endAngle": 180,
+      "isClockwise": true
+    },
+    {
+      "num": 4,
+      "name": "Moon Curve 4",
+      "description": "Moon 4",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "342"},
+        {"num": 2, "x": "90+83", "y": "414"}
+      ],
+      "startAngle": 90,
+      "endAngle": 90,
+      "isClockwise": true
+    },
+    {
+      "num": 5,
+      "name": "Moon Curve 5",
+      "description": "Moon 5",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "342"},
+        {"num": 2, "x": "270+83", "y": "414"}
+      ],
+      "startAngle": 180,
+      "endAngle": 180,
+      "isClockwise": true
+    },
+    {
+      "num": 6,
+      "name": "Moon Curve 6",
+      "description": "Moon 6",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "342"},
+        {"num": 2, "x": "270+83", "y": "414"}
+      ],
+      "startAngle": 90,
+      "endAngle": 90,
+      "isClockwise": true
+    },
+    {
+      "num": 7,
+      "name": "Moon Curve 7",
+      "description": "Moon 7",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "342"},
+        {"num": 2, "x": "270+83", "y": "414"}
+      ],
+      "startAngle": 135,
+      "endAngle": 135,
+      "isClockwise": true
+    }
+  ]
+}

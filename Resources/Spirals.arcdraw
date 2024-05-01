@@ -1,0 +1,53 @@
+{
+  "id": "00000000-0000-0000-0000-000000000006",
+  "pictureName": "Spirals",
+  "pictureDescription": "Generates a picture of various spirals.",
+  "author": "Bruce Johnson",
+  "imageWidth": 560,
+  "imageHeight": 560,
+  "curves": [
+    {
+      "num": 1,
+      "name": "Spirals Curve 1",
+      "description": "A spiral shape with 12 dots",
+      "dots": [
+        {"num": 1, "x": "198+83", "y": "126"},
+        {"num": 1, "x": "162+83", "y": "126"},
+        {"num": 1, "x": "216+83", "y": "126"},
+        {"num": 1, "x": "144+83", "y": "126"},
+        {"num": 1, "x": "234+83", "y": "126"},
+        {"num": 1, "x": "126+83", "y": "126"},
+        {"num": 1, "x": "252+83", "y": "126"},
+        {"num": 1, "x": "108+83", "y": "126"},
+        {"num": 1, "x": "270+83", "y": "126"},
+        {"num": 1, "x": "90+83", "y": "126"},
+        {"num": 1, "x": "288+83", "y": "126"},
+        {"num": 1, "x": "72+83", "y": "126"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 2,
+      "name": "Spirals Curve 2",
+      "description": "A spiral shape with 11 dots",
+      "dots": [
+        {"num": 1, "x": "126+83", "y": "378"},
+        {"num": 1, "x": "144+83", "y": "378"},
+        {"num": 1, "x": "108+83", "y": "378"},
+        {"num": 1, "x": "162+83", "y": "378"},
+        {"num": 1, "x": "90+83", "y": "378"},
+        {"num": 1, "x": "180+83", "y": "378"},
+        {"num": 1, "x": "270+83", "y": "378"},
+        {"num": 1, "x": "198+83", "y": "378"},
+        {"num": 1, "x": "252+83", "y": "378"},
+        {"num": 1, "x": "216+83", "y": "378"},
+        {"num": 1, "x": "234+83", "y": "378"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    }
+  ]
+}

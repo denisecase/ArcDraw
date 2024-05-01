@@ -1,0 +1,52 @@
+{
+  "id": "00000000-0000-0000-0000-000000000007",
+  "pictureName": "YinYang",
+  "pictureDescription": "Generates a picture of a Yin-Yang figure.",
+  "author": "Bruce Johnson",
+  "imageWidth": 577,
+  "imageHeight": 577,
+  "curves": [
+    {
+      "num": 1,
+      "name": "YinYang Curve 1",
+      "description": "A Yin-Yang figure with 5 dots",
+      "dots": [
+        {"num": 1, "x": "36+83", "y": "252"},
+        {"num": 2, "x": "324+83", "y": "252"},
+        {"num": 3, "x": "38+83", "y": "252"},
+        {"num": 4, "x": "180+83", "y": "252"},
+        {"num": 5, "x": "322+83", "y": "252"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+
+      "num": 2,
+      "name": "YinYang Curve 2",
+      "description": "A Yin-Yang figure with 3 dots",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "252"},
+        {"num": 2, "x": "126+83", "y": "252"},
+        {"num": 3, "x": "90+83", "y": "254"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 3,
+      "name": "YinYang Curve 3",
+      "description": "A Yin-Yang figure with 3 dots",
+      "dots": [
+        {"num": 1, "x": "234+83", "y": "252"},
+        {"num": 2, "x": "270+83", "y": "252"},
+        {"num": 3, "x": "234+83", "y": "254"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    }
+  ]
+}

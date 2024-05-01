@@ -1,0 +1,118 @@
+{
+  "id": "00000000-0000-0000-0000-000000000002",
+  "pictureName": "Hearts",
+  "pictureDescription": "Generates a picture of various hearts.",
+  "author": "Bruce Johnson",
+  "imageWidth": 520,
+  "imageHeight": 520,
+  "curves": [
+    {
+      "num": 1,
+      "name": "Heart Curve 1",
+      "description": "A heart shape with 3 dots",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "80"},
+        {"num": 2, "x": "155+83", "y": "101"},
+        {"num": 3, "x": "90+83", "y": "194"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 2,
+      "name": "Heart Curve 2",
+      "description": "Another heart shape with 3 dots",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "80"},
+        {"num": 2, "x": "25+83", "y": "101"},
+        {"num": 3, "x": "90+83", "y": "194"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 3,
+      "name": "Heart Curve 3",
+      "description": "A heart shape with 3 dots",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "80"},
+        {"num": 2, "x": "320+83", "y": "132"},
+        {"num": 3, "x": "270+83", "y": "194"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 4,
+      "name": "Heart Curve 4",
+      "description": "Another heart shape with 3 dots",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "80"},
+        {"num": 2, "x": "220+83", "y": "132"},
+        {"num": 3, "x": "270+83", "y": "194"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 5,
+      "name": "Heart Curve 5",
+      "description": "A heart shape with 4 dots",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "332"},
+        {"num": 2, "x": "162+83", "y": "332"},
+        {"num": 3, "x": "133+83", "y": "415"},
+        {"num": 4, "x": "90+83", "y": "446"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 6,
+      "name": "Heart Curve 6",
+      "description": "Another heart shape with 4 dots",
+      "dots": [
+        {"num": 1, "x": "90+83", "y": "332"},
+        {"num": 2, "x": "18+83", "y": "332"},
+        {"num": 3, "x": "47+83", "y": "415"},
+        {"num": 4, "x": "90+83", "y": "446"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 7,
+      "name": "Heart Curve 7",
+      "description": "A heart shape with 4 dots",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "332"},
+        {"num": 2, "x": "336+83", "y": "325"},
+        {"num": 3, "x": "316+83", "y": "397"},
+        {"num": 4, "x": "291+83", "y": "446"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    },
+    {
+      "num": 8,
+      "name": "Heart Curve 8",
+      "description": "Another heart shape with 4 dots",
+      "dots": [
+        {"num": 1, "x": "270+83", "y": "332"},
+        {"num": 2, "x": "207+83", "y": "353"},
+        {"num": 3, "x": "230+83", "y": "405"},
+        {"num": 4, "x": "291+83", "y": "446"}
+      ],
+      "startAngle": 0,
+      "endAngle": 0,
+      "isClockwise": true
+    }
+  ]
+}
