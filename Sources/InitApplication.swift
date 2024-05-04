@@ -19,7 +19,7 @@
  *    class, we only need to do this when the first instance is initialized.
  *
  *****************************************************************************/
-/*      BOOL InitApplication(HINSTANCE hInstance)
+      BOOL InitApplication(HINSTANCE hInstance)
  {
  WNDCLASS  wc;
 
@@ -38,4 +38,4 @@
 
  // Register the window class and return success/failure code.
  return (RegisterClass(&wc))
- } */
+ } 

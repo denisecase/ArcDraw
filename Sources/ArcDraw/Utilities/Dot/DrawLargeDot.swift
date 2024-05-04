@@ -13,10 +13,6 @@ import CoreGraphics
 func drawLargeDot(dotIndex: Int) {
   var dotRadius: CGFloat = 5.0
 
-  /*
-
-
-
   // Set fill color
   context.setFillColor(NSColor.black.cgColor)
 
@@ -35,6 +31,6 @@ func drawLargeDot(dotIndex: Int) {
 
 
 
-  */
+  
   return
 }

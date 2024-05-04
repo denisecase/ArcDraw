@@ -20,7 +20,7 @@
  *   it returns, free the instance address.
  *
  ****************************************************************************/
-/*     LRESULT CALLBACK WndProc(
+     LRESULT CALLBACK WndProc(
  HWND     hWnd,       // window handle
  UINT     message,    // type of message
  WPARAM   wParam,     // additional information
@@ -691,7 +691,7 @@
  }
 
  return (0L)
- } */
+ } 
 
 
 

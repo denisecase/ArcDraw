@@ -4,7 +4,7 @@
 
  Restore to previous condition of curve and reset menu item.
  */
-/*    VOID  UndoLast (HWND  hWnd)
+    func  UndoLast ()
  {
  var    i: Int
  var    highDotNum: Int
@@ -212,4 +212,4 @@
  ReleaseDC(hWnd, hDC)
 
  return;
- } */
+ } 

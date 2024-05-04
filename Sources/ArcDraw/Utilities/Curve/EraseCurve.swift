@@ -4,7 +4,7 @@
 
  Handle erasing of arcs for one curve.*/
 
-/*     VOID  EraseCurve(HWND  hWnd, HDC hDC)
+     func  EraseCurve()
  {
 
  var      xL: Int
@@ -106,4 +106,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

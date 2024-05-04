@@ -11,7 +11,10 @@
 
  Changes: loads points in global array
  */
-/*     func defineDirection(HWND  hWnd, HDC  hDC, LPARAM  lParam)
+ 
+ import CoreGraphics
+ 
+     func defineDirection(HWND  hWnd, HDC  hDC, LPARAM  lParam)
  {
  var      i: Int
  RECT    rectDot;
@@ -89,7 +92,9 @@
  LineTo(hDC, posnx, posny)  //to show the drection line
 
  //  Put in a time delay so we can see the direction line
- Sleep(100)
+// Sleep(100)
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+}
 
  /*  define the direction angle   */
  /*  angle is integer, 0.0 to 360.0, CW from straight up  */
@@ -139,4 +144,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

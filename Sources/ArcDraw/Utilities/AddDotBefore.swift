@@ -12,7 +12,7 @@
 
 import CoreGraphics
 
-/*
+
 func addDotBefore(HWND  hWnd, HDC  hDC, LPARAM  lParam)
 {
   var            i: Int
@@ -162,4 +162,4 @@ return
 
   return
 }
-*/
+

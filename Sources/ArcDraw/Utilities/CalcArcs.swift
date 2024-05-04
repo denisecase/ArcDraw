@@ -10,7 +10,7 @@
  Returns: nothing
  */
 
-/*
+
 func calcArcs()
 {
   var i: Int
@@ -607,4 +607,3 @@ for ( k = initialAngleIndex - 1;  k >= 15*gCurveNum;  k-= )
                           return;
                           }
 
-            */

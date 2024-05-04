@@ -6,7 +6,7 @@
  */
 
 import CoreGraphics
-/*
+
 func  Moons( hDC:HDC )
  {
 
@@ -26,28 +26,30 @@ func  Moons( hDC:HDC )
  90+83, 90+83,  90+83, 90+83,  270+83, 270+83,  270+83, 270+83}
  var        y[15] = {90, 162, 90,  90, 162,  90, 162,
  342, 414,  342, 414,  342, 414,  342, 414}
+ 
+ var g = ArcDrawGlobals()  // initialize arc draw constants to local var named g
 
  HPEN      hPen
 
- highCurveNum = gHighCurveNum
+ highCurveNum = g.gHighCurveNum
 
  /*  Initialize some of the globals  */
- gAngleClick = 0
- gAddDotClick = 0
- gOldDotLoc = nullPoint
- gOldAppleAngle = 0
- gAppleAngle = 0
+ g.gAngleClick = 0
+ g.gAddDotClick = 0
+ g.gOldDotLoc = nullPoint
+ g.gOldAppleAngle = 0
+ g.gAppleAngle = 0
 
- gSecondAngleFlag = false
- gSketchFlag = false
- gUndoFlag = false
- gHighCurveNumFlag = false
+ g.gSecondAngleFlag = false
+ g.gSketchFlag = false
+ g.gUndoFlag = false
+ g.gHighCurveNumFlag = false
 
- gDotSelectIndex = 0
- gDeleteDotIndex = 0
- gDragDotIndex = 0
- gAddDotIndex = 0
- gOldAngleIndex = 0
+ g.gDotSelectIndex = 0
+ g.gDeleteDotIndex = 0
+ g.gDragDotIndex = 0
+ g.gAddDotIndex = 0
+ g.gOldAngleIndex = 0
 
  for ( n = 0; n <= highCurveNum; n+= )
  {
@@ -97,11 +99,15 @@ func  Moons( hDC:HDC )
  localIndex +=
  drawDot(hWnd, hDC, 15*n + i)
  dotAsRegion(15*n + i)
- Sleep(500)
+// Sleep(500)
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+}
  }
 
  drawLargeDot(15*n + iAngle[n])
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
 
  gAppleAngle   = appleAngle[n]
  gAngleFlag[n]   = true
@@ -115,7 +121,9 @@ func  Moons( hDC:HDC )
  MoveToEx(hDC, gDotLoc[ 15*n + iAngle[n] ].x, gDotLoc[ 15*n + iAngle[n] ].y, NULL)
  LineTo(hDC, anglePoint.x, anglePoint.y)
 
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  EraseLargeDot(hWnd, hDC, 15*n + iAngle[n] )
 
  /*  Erase angle line  */
@@ -137,6 +145,3 @@ func  Moons( hDC:HDC )
  return
  }
 
-
-
-*/

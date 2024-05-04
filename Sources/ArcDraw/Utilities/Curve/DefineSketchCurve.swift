@@ -13,7 +13,7 @@
 
  Changes: loads dots in global array
  */
-/*    VOID  defineSketchCurve (HWND  hWnd, HDC  hDC, LPARAM  lParam)
+    func  defineSketchCurve (LPARAM  lParam)
  {
  var firstPoint: CGPoint
  var        x1: Int
@@ -26,6 +26,8 @@
  var      posnx: Double
  var      posny: Double
  var posn: CGPoint
+ 
+ var g = ArcDrawGlobals()  // initialize arc draw constants to local var named g
 
  posnx   = LOWORD(lParam)
  posny   = HIWORD(lParam)
@@ -67,17 +69,17 @@
 
  if gArcLength >= 80
  {
- if gHighDotNum[gCurveNum] < 13    //  Define Sketch Dots
+ if g.gHighDotNum[g.gCurveNum] < 13    //  Define Sketch Dots
  {
- gHighDotNum[gCurveNum] +=
- defineSketchDot(hWnd, hDC, gLastMouse)  // Calls DrawSketchDot
+ g.gHighDotNum[g.gCurveNum] +=
+ defineSketchDot(gLastMouse)  // Calls DrawSketchDot
  }
  gArcLength = 0
  }
 
  }  //End if (unequal positions)
 
- ReleaseDC(hWnd, hDC)
+ ReleaseDC()
  return
 
  }  //  End if(gMouseDown == true)
@@ -87,14 +89,14 @@
  /*   Define last sketch dot if gArcLength is great enough    */
  if gArcLength >= 60
  {
- gHighDotNum[gCurveNum] +=
- defineSketchDot(hWnd, hDC, posn)
+ g.gHighDotNum[g.gCurveNum] +=
+ defineSketchDot(posn)
  }
 
- x1 = gDotLoc[15*gCurveNum].x
+ x1 = g.gDotLoc[15*g.gCurveNum].x
  x3 = gAnglePoint2.x
 
- y1 = -gDotLoc[15*gCurveNum].y
+ y1 = -g.gDotLoc[15*g.gCurveNum].y
  y3 = -gAnglePoint2.y
 
  gAlpha1 = gRadToDeg*atan2(y3 - y1, x3 - x1)
@@ -102,14 +104,14 @@
  if gAlpha1 < 0.0 {
  gAlpha1 = gAlpha1 + 360.0 }  //  To get initially in range of 0.0 to 360.0
 
- gAppleAngle = 90.0 - gAlpha1
+ g.gAppleAngle = 90.0 - gAlpha1
 
- if gAppleAngle < 0 {
- gAppleAngle = gAppleAngle + 360.0 }
+ if g.gAppleAngle < 0 {
+ g.gAppleAngle = g.gAppleAngle + 360.0 }
 
- gSecondAngleFlag = false
- gAngleFlag[gCurveNum] = true
- gAngleIndex[gCurveNum] = 15*gCurveNum
+ g.gSecondAngleFlag = false
+ g.gAngleFlag[g.gCurveNum] = true
+ g.gAngleIndex[g.gCurveNum] = 15*g.gCurveNum
 
  calcArcs()
 
@@ -126,8 +128,8 @@
 
  gAppleAngle = 90.0 - gAlpha1
 
- if gAppleAngle < 0 {
- gAppleAngle = gAppleAngle + 360.0 }
+ if g.gAppleAngle < 0 {
+ g.gAppleAngle = g.gAppleAngle + 360.0 }
 
  calcArcs()
 
@@ -143,8 +145,8 @@
 
  gAppleAngle = 90.0 - gAlpha1
 
- if gAppleAngle < 0.0 {
- gAppleAngle = gAppleAngle + 360.0 }
+ if g.gAppleAngle < 0.0 {
+ g.gAppleAngle = g.gAppleAngle + 360.0 }
 
  calcArcs()
 
@@ -159,13 +161,13 @@
 
  else if gEnergyFlag == false
  {
- gHighDotNum[gCurveNum] = -1
+ g.gHighDotNum[g.gCurveNum] = -1
  MessageBox  (hWnd,
  "Curve is too short.",
  "arcDraw",
  MB_ICONEXCLAMATION | MB_OK)
 
- ReleaseDC(hWnd, hDC)
+ ReleaseDC()
  return
  }
 
@@ -185,10 +187,10 @@
 
  gAlpha1 = gAlpha1 + 1
 
- gAppleAngle = 90.0 - gAlpha1
+ g.gAppleAngle = 90.0 - gAlpha1
 
- if gAppleAngle < 0 {
- gAppleAngle = gAppleAngle + 360.0 }
+ if g.gAppleAngle < 0 {
+ g.gAppleAngle = g.gAppleAngle + 360.0 }
 
  calcArcs()
 
@@ -213,10 +215,10 @@
 
  gAlpha1 = gAlpha1 - 1
 
- gAppleAngle = 90.0 - gAlpha1
+ g.gAppleAngle = 90.0 - gAlpha1
 
- if gAppleAngle < 0 {
- gAppleAngle = gAppleAngle + 360.0 }
+ if g.gAppleAngle < 0 {
+ g.gAppleAngle = g.gAppleAngle + 360.0 }
 
  calcArcs()
 
@@ -232,38 +234,38 @@
 
  }  //  End else
 
- gAppleAngle = 90.0 - gAlpha1
+ g.gAppleAngle = 90.0 - gAlpha1
 
- if gAppleAngle < 0 {
- gAppleAngle = gAppleAngle + 360.0 }
+ if g.gAppleAngle < 0 {
+ g.gAppleAngle = g.gAppleAngle + 360.0 }
 
  calcArcs()
- redraw(hWnd, hDC)
+ redraw()
  gEnergyFlag = true
 
  //      dummy = x1 + x3 + y1 + y3 + gMenuItem + gAlpha1 + i
 
- gLastMenuItem  = IDM_NEWSKETCHCURVE
+ g.gLastMenuItem  = IDM_NEWSKETCHCURVE
 
- gAngleFlag[gHighCurveNum] = true
- gDotSelectIndex            = 0
+ g.gAngleFlag[g.gHighCurveNum] = true
+ g.gDotSelectIndex            = 0
  gSketchClick              = 1
  gAngleFlag2               = false
 
 
- if gHighCurveNum < 19  //  gHighCurveNum starts at -1
+ if g.gHighCurveNum < 19  //  gHighCurveNum starts at -1
  {
- gHighCurveNum +=
- gCurveNum    = gHighCurveNum
- gMenuItem    = IDM_NEWSKETCHCURVE
- gSketchFlag = true
+ g.gHighCurveNum +=
+ g.gCurveNum    = g.gHighCurveNum
+ g.gMenuItem    = IDM_NEWSKETCHCURVE
+ g.gSketchFlag = true
 
  }
 
  else {
- gHighCurveNumFlag = true }
+ g.gHighCurveNumFlag = true }
 
- ReleaseDC(hWnd, hDC)
+ ReleaseDC()
 
  return
- } */
+ } 

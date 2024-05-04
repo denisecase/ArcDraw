@@ -6,7 +6,7 @@
  gAddDotIndex of the dot to delete and move the higher dots of this curve down one step.
  We can't delete the dot the angle was defined from.
  */
-/*    VOID  DeleteDot(HWND  hWnd, HDC  hDC, LPARAM  lParam)
+    func  DeleteDot(LPARAM  lParam)
  {
  var      i: Int
  var    ptIsInARegion = false
@@ -111,4 +111,4 @@
  ReleaseDC(hWnd, hDC)
  return
 
- } */
+ } 

@@ -9,7 +9,7 @@
  Changes: curve number
  Returns: nothing
  */
-/*    VOID  DecodeIndex(HWND  hWnd, HDC  hDC, int  index)
+    func  DecodeIndex(int  index)
  {
  var      n: Int
  var      test: Int
@@ -31,4 +31,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

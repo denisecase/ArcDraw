@@ -7,7 +7,7 @@
  Receives: pointer to window containing curve and index of dot
  Changes: erases dot by making it white
  */
-/*   VOID  EraseLargeDot(HWND  hWnd, HDC hDC, int  dotIndex)
+   func  EraseLargeDot(int  dotIndex)
  {
  RECT  rectDot
  var    dotRadius = 5
@@ -27,4 +27,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

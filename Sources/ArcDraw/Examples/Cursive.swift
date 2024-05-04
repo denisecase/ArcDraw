@@ -4,7 +4,10 @@
 
  This generates a picture of cursive handwriting.
  */
-/*    VOID  Cursive(HWND  hWnd, HDC hDC)
+ 
+ import CoreGraphics
+ 
+    func  Cursive()
  {
  var        i: Int
  var        n: Int
@@ -18,11 +21,11 @@
  var        newHeight: Int
 
  var        numCurves = 13
- var        iAngle[13] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
- var        appleAngle[13] = {200, 215, 62, 42, 30, 232, 224, 220, 219, 218,
- 217, 49, 31}
- var        numDots[13] = {4, 2, 4, 5, 5, 4, 3, 4, 8, 4, 6, 6, 3};
- var        x[58] = {91+50, 105+50, 122+50, 155+50,
+ var        iAngle[13] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+ var        appleAngle[13] = [200, 215, 62, 42, 30, 232, 224, 220, 219, 218,
+ 217, 49, 31]
+ var        numDots[13] = [4, 2, 4, 5, 5, 4, 3, 4, 8, 4, 6, 6, 3]
+ var        x[58] = [91+50, 105+50, 122+50, 155+50,
  154+50, 80+50,  80+50, 146+50, 159+50, 128+50,
  127+50, 157+50, 185+50, 199+50, 170+50,  240+50,
  231+50, 202+50, 207+50, 233+50,
@@ -32,8 +35,8 @@
  342+50, 369+50,  368+50, 358+50, 365+50, 407+50,
  406+50, 363+50, 354+50, 426+50, 431+50, 420+50,
  419+50, 448+50, 460+50, 460+50, 464+50, 512+50,
- 338+50, 339+50, 338+50}
- var        y[58] = {13+83, 33+83, 34+83, 17+83,  16+83, 84+83,
+ 338+50, 339+50, 338+50]
+ var        y[58] = [13+83, 33+83, 34+83, 17+83,  16+83, 84+83,
  84+83, 30+83, 37+83, 88+83,
  88+83, 59+83, 44+83, 58+83, 105+83,  76+83, 64+83,
  82+83, 93+83, 75+83,
@@ -43,29 +46,31 @@
  82+83,  82+83, 95+83, 105+83, 79+83,
  79+83, 132+83, 125+83, 85+83, 95+83, 105+83,  105+83,
  89+83, 94+83, 102+83, 106+83, 71+83,
- 6+83, 7+83, 6+83}
+ 6+83, 7+83, 6+83]
+ 
+ var g = ArcDrawGlobals()  // initialize arc draw constants to local var named g
 
  HPEN      hPen
 
- highCurveNum = gHighCurveNum
+ highCurveNum = g.gHighCurveNum
 
  /*  Initialize some of the globals  */
- gAngleClick = 0
- gAddDotClick = 0
- gOldDotLoc = nullPoint
- gOldAppleAngle = 0
- gAppleAngle = 0
+ g.gAngleClick = 0
+ g.gAddDotClick = 0
+ g.gOldDotLoc = nullPoint
+ g.gOldAppleAngle = 0
+ g.gAppleAngle = 0
 
- gSecondAngleFlag = false
- gSketchFlag = false
- gUndoFlag = false
- gHighCurveNumFlag = false
+ g.gSecondAngleFlag = false
+ g.gSketchFlag = false
+ g.gUndoFlag = false
+ g.gHighCurveNumFlag = false
 
- gDotSelectIndex = 0
- gDeleteDotIndex = 0
- gDragDotIndex = 0
- gAddDotIndex = 0
- gOldAngleIndex = 0
+ g.gDotSelectIndex = 0
+ g.gDeleteDotIndex = 0
+ g.gDragDotIndex = 0
+ g.gAddDotIndex = 0
+ g.gOldAngleIndex = 0
 
  for ( n = 0; n <= highCurveNum; n+= )
  {
@@ -115,11 +120,15 @@
  localIndex+=
  drawDot(hWnd, hDC, 15*n + i)
  dotAsRegion(15*n + i)
- Sleep(500)
+// Sleep(500)
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+}
  }
 
  drawLargeDot(15*n + iAngle[n])
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
 
  gAppleAngle   = appleAngle[n]
  gAngleFlag[n]   = true
@@ -133,7 +142,9 @@
  MoveToEx(hDC, gDotLoc[ 15*n + iAngle[n] ].x, gDotLoc[ 15*n + iAngle[n] ].y, NULL)
  LineTo(hDC, anglePoint.x, anglePoint.y)
 
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  EraseLargeDot( hWnd, hDC, 15*n + iAngle[n] )
 
  /*  Erase angle line  */
@@ -145,14 +156,16 @@
  calcArcs()
  EraseLines(hWnd, hDC)
  DrawCurve(hWnd, hDC)
- Sleep(1000)
+// Sleep(1000)
  }
 
  redraw(hWnd, hDC)
 
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
 
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

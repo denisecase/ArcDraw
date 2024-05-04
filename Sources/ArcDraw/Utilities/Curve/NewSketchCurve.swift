@@ -6,7 +6,7 @@
 
  Changes: curve number
  */
-/*    VOID  NewSketchCurve(HWND  hWnd)
+    func  NewSketchCurve()
  {
  if gHighCurveNum < 19  //  gHighCurveNum starts at -1
  {
@@ -21,4 +21,4 @@
  gHighCurveNumFlag = true }
 
  return
- } */
+ } 

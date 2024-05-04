@@ -21,7 +21,7 @@
  *    returns the conventional value NULL.
  *
  ****************************************************************************/
-/*     int APIENTRY WinMain(
+     int APIENTRY WinMain(
  HINSTANCE   hInstance,
  HINSTANCE   hPrevInstance,
  LPSTR       lpCmdLine,
@@ -60,4 +60,4 @@
 
  return (msg.wParam)               // Returns the value from PostQuitMessage
 
- } */
+ } 

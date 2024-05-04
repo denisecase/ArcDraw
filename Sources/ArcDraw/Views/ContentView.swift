@@ -62,7 +62,7 @@ struct ContentView: View {
 /* DMC
 
 
- /*     // Assuming you have a CGPathRef called 'regionPath' representing your region
+      // Assuming you have a CGPathRef called 'regionPath' representing your region
 
 CGPoint clickPoint = [event locationInWindow]; // Get the mouse click point
 clickPoint = [myView convertPoint:clickPoint fromView:nil]; // Convert the point to the view's coordinate system
@@ -106,4 +106,3 @@ if (CGPathContainsPoint(regionPath, NULL, clickPoint, NO)) {
    
     }
 }
-*/ // DENISE DMC COMMENTED OUT

@@ -7,7 +7,7 @@
  be defined. We move curves down, as necessary, and decrement gHighCurveNum by one. We only
  calculate arcs up thru gHighCurveNum, so anything higher in the arrays have no effect.
  */
-/*     VOID  ClearCurve(HWND  hWnd, HDC  hDC, LPARAM  lParam)
+     func  ClearCurve(LPARAM  lParam)
  {
  var        i: Int
  var        j: Int
@@ -135,4 +135,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

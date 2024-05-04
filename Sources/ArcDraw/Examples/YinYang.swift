@@ -4,7 +4,10 @@
 
  This generates a picture of a Yin-Yang figure.
  */
-/*    VOID  YinYang(HWND  hWnd, HDC hDC)
+ 
+ import CoreGraphics
+ 
+    func  YinYang()
  {
 
  var        i: Int
@@ -16,56 +19,58 @@
  var        localIndex: Int
 
  var        numCurves = 3
- var        iAngle[3] = {0, 0, 0}
- var        appleAngle[3] = {0.0, 0.0, 0.0}
- var        numDots[3] = {5, 3, 3}
- var        x[11] = {36+83, 324+83, 38+83, 180+83, 322+83, 90+83,
- 126+83, 90+83, 234+83, 270+83, 234+83}
- var        y[11] = {252, 252, 252, 252, 252, 252, 252, 254, 252, 252, 254}
+ var        iAngle[3] = [{0, 0, 0]
+ var        appleAngle[3] = [0.0, 0.0, 0.0]
+ var        numDots[3] = [5, 3, 3]
+ var        x[11] = [36+83, 324+83, 38+83, 180+83, 322+83, 90+83,
+ 126+83, 90+83, 234+83, 270+83, 234+83]
+ var        y[11] = [252, 252, 252, 252, 252, 252, 252, 254, 252, 252, 254]
+ 
+ var g = ArcDrawGlobals()  // initialize arc draw constants to local var named g
 
  HPEN      hPen
 
- highCurveNum = gHighCurveNum
+ highCurveNum = g.gHighCurveNum
 
  /*  Initialize some of the globals  */
- gAngleClick = 0
- gAddDotClick = 0
- gOldDotLoc = nullPoint
- gOldAppleAngle = 0.0
- gAppleAngle = 0.0
+ g.gAngleClick = 0
+ g.gAddDotClick = 0
+ g.gOldDotLoc = nullPoint
+ g.gOldAppleAngle = 0.0
+ g.gAppleAngle = 0.0
 
- gSecondAngleFlag = false
- gSketchFlag = false
- gUndoFlag = false
- gHighCurveNumFlag = false
+ g.gSecondAngleFlag = false
+ g.gSketchFlag = false
+ g.gUndoFlag = false
+ g.gHighCurveNumFlag = false
 
- gDotSelectIndex = 0
- gDeleteDotIndex = 0
- gDragDotIndex = 0
- gAddDotIndex = 0
- gOldAngleIndex = 0
+ g.gDotSelectIndex = 0
+ g.gDeleteDotIndex = 0
+ g.gDragDotIndex = 0
+ g.gAddDotIndex = 0
+ g.gOldAngleIndex = 0
 
  for ( n = 0; n <= highCurveNum; n+= )
  {
- gHighDotNum[n] = -1
- gAngleFlag[n] = false
- gAngleIndex[n] = 0
+ g.gHighDotNum[n] = -1
+ g.gAngleFlag[n] = false
+ g.gAngleIndex[n] = 0
  }
 
  for ( i = 0; i <= 15*(highCurveNum + 1); i+= )
  {
- gX[i] = 0
- gY[i] = 0
- gAlphai[i] = 0.0
- gAlphaf[i] = 0.0
- gStartAngle[i] = 0.0
- gArcAngle[i] = 0.0
- gXc[i] = 0.0
- gYc[i] = 0.0
- gR[i] = 0.0
- gDotLoc[i] = nullPoint
+ g.gX[i] = 0
+ g.gY[i] = 0
+ g.gAlphai[i] = 0.0
+ g.gAlphaf[i] = 0.0
+ g.gStartAngle[i] = 0.0
+ g.gArcAngle[i] = 0.0
+ g.gXc[i] = 0.0
+ g.gYc[i] = 0.0
+ g.gR[i] = 0.0
+ g.gDotLoc[i] = nullPoint
 
- gIsCW[i] = 0
+ g.gIsCW[i] = 0
  }
 
  gMenuItem     = IDM_YINYANG
@@ -93,11 +98,15 @@
  localIndex +=
  drawDot(hWnd, hDC, 15*n + i)
  dotAsRegion(15*n + i)
- Sleep(500)
+// Sleep(500)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  }
 
  drawLargeDot(15*n + iAngle[n])
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
 
  gAppleAngle   = appleAngle[n]
  gAngleFlag[n]   = true
@@ -111,7 +120,9 @@
  MoveToEx(hDC, gDotLoc[ 15*n + iAngle[n] ].x, gDotLoc[ 15*n + iAngle[n] ].y, NULL)
  LineTo(hDC, anglePoint.x, anglePoint.y)
 
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  EraseLargeDot( hWnd,hDC, 15*n + iAngle[n] )
 
  /*  Erase angle line  */
@@ -123,7 +134,9 @@
  calcArcs()
  EraseLines(hWnd, hDC)
  drawCurve(hWnd, hDC)
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  }
 
  redraw(hWnd, hDC)
@@ -131,4 +144,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

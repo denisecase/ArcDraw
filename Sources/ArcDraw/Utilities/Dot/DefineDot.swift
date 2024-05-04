@@ -11,7 +11,7 @@
  When drawing and moving arcDraw curves we deal in Windows (local) coordinates.
  */
 
-/*
+
 func defineDot(HWND  hWnd, HDC  hDC, LPARAM  lParam)
 {
   var lastPoint: CGPoint
@@ -57,4 +57,3 @@ if !gAngleFlag[gCurveNum]  /*   Angle Flag is not set   */
 
 }
 
-*/

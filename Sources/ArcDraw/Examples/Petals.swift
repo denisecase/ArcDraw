@@ -4,7 +4,7 @@
 
  This generates a picture of various petals.
  */
-/*    VOID  Petals(HWND  hWnd, HDC hDC)
+    func  Petals()
  {
 
  var        i: Int
@@ -45,27 +45,29 @@
  324, 295, 283, 294, 324, 356, 389, 402, 407, 398, 364, 324,
  410, 400, 391, 367, 333, 299, 297, 325, 348, 368, 396, 406, 410,
  283, 277, 273, 280, 308, 410, 410, 450, 411, 450, 411, 450, 450}
+ 
+ var g = ArcDrawGlobals()  // initialize arc draw constants to local var named g
 
  HPEN      hPen;
- highCurveNum = gHighCurveNum
+ highCurveNum = g.gHighCurveNum
 
  /*  Initialize some of the globals  */
- gAngleClick = 0
- gAddDotClick = 0
- gOldDotLoc = nullPoint
- gOldAppleAngle = 0
- gAppleAngle = 0
+ g.gAngleClick = 0
+ g.gAddDotClick = 0
+ g.gOldDotLoc = nullPoint
+ g.gOldAppleAngle = 0
+ g.gAppleAngle = 0
 
- gSecondAngleFlag = false
- gSketchFlag = false
- gUndoFlag = false
- gHighCurveNumFlag = false
+ g.gSecondAngleFlag = false
+ g.gSketchFlag = false
+ g.gUndoFlag = false
+ g.gHighCurveNumFlag = false
 
- gDotSelectIndex = 0
- gDeleteDotIndex = 0
- gDragDotIndex = 0
- gAddDotIndex = 0
- gOldAngleIndex = 0
+ g.gDotSelectIndex = 0
+ g.gDeleteDotIndex = 0
+ g.g.gDragDotIndex = 0
+ g.gAddDotIndex = 0
+ g.gOldAngleIndex = 0
 
  for ( n = 0; n <= highCurveNum; n+= )
  {
@@ -115,11 +117,15 @@
  localIndex +=
  drawDot(hWnd, hDC, 15*n + i)
  dotAsRegion(15*n + i)
- Sleep(500)
+// Sleep(500)
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+}
  }
 
  drawLargeDot15*n + iAngle[n])
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
 
  gAppleAngle   = appleAngle[n]
  gAngleFlag[n]   = true
@@ -133,7 +139,9 @@
  MoveToEx(hDC, gDotLoc[ 15*n + iAngle[n] ].x, gDotLoc[ 15*n + iAngle[n] ].y, NULL)
  LineTo(hDC, anglePoint.x, anglePoint.y)
 
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  EraseLargeDot( hWnd, hDC, 15*n + iAngle[n] )
 
  /*  Erase angle line  */
@@ -145,7 +153,9 @@
  calcArcs()
  EraseLines(hWnd, hDC)
  DrawCurve(hWnd, hDC)
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  }
 
  redraw(hWnd, hDC)
@@ -153,4 +163,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

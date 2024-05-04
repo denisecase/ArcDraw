@@ -5,7 +5,7 @@
  Handle dragging of dots the old-fashioned way. Animate dots by erasing old location and
  redrawing in new location.
  */
-/*     VOID  DragDot(HWND  hWnd, HDC  hDC, LPARAM  lParam)
+     func  DragDot(LPARAM  lParam)
  {
  int      i: Int
  var    posnx: Double
@@ -84,4 +84,4 @@
  redraw(hWnd, hDC)
  ReleaseDC(hWnd, hDC)
  return
- } */
+ } 

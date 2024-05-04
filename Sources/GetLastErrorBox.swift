@@ -8,7 +8,7 @@
  *            in a MessageBox.
  *
  *********************************************************************/
-/*     double GetLastErrorBox(HWND hWnd, LPSTR lpTitle)
+     double GetLastErrorBox(HWND hWnd, LPSTR lpTitle)
  {
  LPVOID lpv
  var dwRv: Double
@@ -32,4 +32,4 @@
 
  SetLastError(0)
  return dwRv
- } */
+ } 

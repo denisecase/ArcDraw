@@ -4,7 +4,7 @@
 
  Handle erasing of lines connecting dots for one curve.*/
 
-/*   VOID  EraseLines(HWND  hWnd, HDC hDC)
+   func  EraseLines()
  {
  var    i: Int
  var    n: Int
@@ -54,4 +54,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

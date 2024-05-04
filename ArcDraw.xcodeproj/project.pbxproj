@@ -98,6 +98,7 @@
 		885A8ACE2A9B67430028E8BF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A8ACD2A9B67430028E8BF /* AppState.swift */; };
 		885A8AE12A9B76DA0028E8BF /* Cursive.arcdraw in Resources */ = {isa = PBXBuildFile; fileRef = 885A8AE02A9B76DA0028E8BF /* Cursive.arcdraw */; };
 		885A8AE32A9B86B60028E8BF /* GetLastErrorBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A8AE22A9B86B60028E8BF /* GetLastErrorBox.swift */; };
+		C5283BDD2BE29CEA00229C9D /* ArcDrawGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5283BDC2BE29CEA00229C9D /* ArcDrawGlobals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,6 +194,7 @@
 		885A8ADE2A9B74AC0028E8BF /* YinYang.arcdraw */ = {isa = PBXFileReference; lastKnownFileType = text; path = YinYang.arcdraw; sourceTree = "<group>"; };
 		885A8AE02A9B76DA0028E8BF /* Cursive.arcdraw */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cursive.arcdraw; sourceTree = "<group>"; };
 		885A8AE22A9B86B60028E8BF /* GetLastErrorBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLastErrorBox.swift; sourceTree = "<group>"; };
+		C5283BDC2BE29CEA00229C9D /* ArcDrawGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcDrawGlobals.swift; sourceTree = "<group>"; };
 		C568E3E02A68755C00B63F6F /* ArcDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C568E3E92A68755C00B63F6F /* ArcDraw.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArcDraw.entitlements; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -260,6 +262,7 @@
 				880250E42A9E617A0076E001 /* DotDefinition.swift */,
 				885A8A792A9AB7FD0028E8BF /* Line.swift */,
 				885A8A632A9A927C0028E8BF /* PictureDefinition.swift */,
+				C5283BDC2BE29CEA00229C9D /* ArcDrawGlobals.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				885A8A7D2A9B56EB0028E8BF /* YinYang.swift in Sources */,
 				880251092AAC2DEE0076E001 /* OneDocManager.swift in Sources */,
 				880250DB2A9BD0CB0076E001 /* TabSave.swift in Sources */,
+				C5283BDD2BE29CEA00229C9D /* ArcDrawGlobals.swift in Sources */,
 				880250D32A9BC7B20076E001 /* CurveListView.swift in Sources */,
 				880250CD2A9BC62F0076E001 /* CommaNumberFormatter.swift in Sources */,
 				885A8AC12A9B5DC20028E8BF /* InitInstance.swift in Sources */,
@@ -707,11 +711,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ArcDraw.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L3C8KXQ7DP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -726,7 +731,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -735,10 +739,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -748,11 +752,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ArcDraw.entitlements;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L3C8KXQ7DP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -767,7 +772,6 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -776,10 +780,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

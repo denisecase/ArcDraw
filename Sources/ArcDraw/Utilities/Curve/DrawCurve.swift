@@ -5,7 +5,7 @@
  Handle drawing of arcs for one curve.
 
  */
-/*     VOID  drawCurve(HWND  hWnd, HDC hDC)
+     func  drawCurve()
  {
  var      xL: Int
  var      yT: Int
@@ -108,4 +108,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

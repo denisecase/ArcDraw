@@ -20,7 +20,7 @@
  *
  ****************************************************************************/
 
-/*     LRESULT CALLBACK About(
+     LRESULT CALLBACK About(
  HWND hDlg,           // window handle of the dialog box
  UINT message,        // type of message
  WPARAM wParam,       // message-specific information
@@ -39,7 +39,7 @@
  }
  return (false) // Didn't process the message
 
- } */
+ } 
 
 
 

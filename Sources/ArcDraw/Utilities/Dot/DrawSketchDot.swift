@@ -5,7 +5,7 @@
  Handle drawing of sketch dots. We don't send index as a parameter
  because we also need highDotNum.
  */
-/*    VOID  drawSketchDot(HWND  hWnd, HDC hDC)
+    func  drawSketchDot()
  {
  RECT  rectDot
  var    dotRadius = 3
@@ -30,4 +30,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

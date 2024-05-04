@@ -6,7 +6,7 @@
 
  Changes: curve number
  */
-/*    VOID  NewCurve(HWND  hWnd)
+    func  NewCurve()
  {
  if gHighCurveNum < 19   //  gHighCurveNum starts at zero
  {
@@ -22,4 +22,4 @@
  MB_ICONEXCLAMATION | MB_OK) }
 
  return
- } */
+ } 

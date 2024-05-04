@@ -4,7 +4,10 @@
 
  This generates a picture of various shapes.
  */
-/*     VOID  Shapes(HWND  hWnd, HDC hDC)
+ 
+ import CoreGraphics
+ 
+     func  Shapes()
  {
 
  var        i: Int
@@ -19,35 +22,37 @@
  var        iAngle[5] = {0, 0, 0, 0, 0}
  var        appleAngle[5] = {45.0, 0.0, 35.0, 50.0, 140.0}
  var        numDots[5] = {5, 5, 5, 4, 4}
- var        x[23] = {63+83, 117+83, 153+83, 27+83, 63+83, 216+83,
+ var        x[23] = [63+83, 117+83, 153+83, 27+83, 63+83, 216+83,
  324+83, 324+83, 216+83, 216+83,
  54+83, 126+83, 126+83, 54+83, 54+83, 270+83, 318+83,
- 222+83, 270+83, 270+83, 318+83, 222+83, 270+83}
- var        y[23] = {54, 54, 198, 198, 54, 63, 63, 162, 162, 63,
+ 222+83, 270+83, 270+83, 318+83, 222+83, 270+83]
+ var        y[23] = [54, 54, 198, 198, 54, 63, 63, 162, 162, 63,
  292, 341, 415, 464, 292, 236, 311, 311, 236,
- 344, 419, 419, 344}
+ 344, 419, 419, 344]
+ 
+ var g = ArcDrawGlobals()  // initialize arc draw constants to local var named g
 
  HPEN      hPen
 
- highCurveNum = gHighCurveNum
+ highCurveNum = g.gHighCurveNum
 
  /*  Initialize some of the globals  */
- gAngleClick = 0
- gAddDotClick = 0
- gOldDotLoc = nullPoint
- gOldAppleAngle = 0.0
- gAppleAngle = 0.0
+ g.gAngleClick = 0
+ g.gAddDotClick = 0
+ g.gOldDotLoc = nullPoint
+ g.gOldAppleAngle = 0.0
+ g.gAppleAngle = 0.0
 
- gSecondAngleFlag = false
- gSketchFlag = false
- gUndoFlag = false
- gHighCurveNumFlag = false
+ g.gSecondAngleFlag = false
+ g.gSketchFlag = false
+ g.gUndoFlag = false
+ g.gHighCurveNumFlag = false
 
- gDotSelectIndex = 0
- gDeleteDotIndex = 0
- gDragDotIndex = 0
- gAddDotIndex = 0
- gOldAngleIndex = 0
+ g.gDotSelectIndex = 0
+ g.gDeleteDotIndex = 0
+ g.gDragDotIndex = 0
+ g.gAddDotIndex = 0
+ g.gOldAngleIndex = 0
 
  for ( n = 0; n <= highCurveNum; n+= )
  {
@@ -97,11 +102,15 @@
  localIndex +=
  drawDot(hWnd, hDC, 15*n + i)
  dotAsRegion(15*n + i)
- Sleep(500)
+// Sleep(500)
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+}
  }
 
  drawLargeDot(15*n + iAngle[n])
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
 
  gAppleAngle   = appleAngle[n]
  gAngleFlag[n]   = true
@@ -115,7 +124,9 @@
  MoveToEx(hDC, gDotLoc[ 15*n + iAngle[n] ].x, gDotLoc[ 15*n + iAngle[n] ].y, NULL)
  LineTo(hDC, anglePoint.x, anglePoint.y)
 
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  EraseLargeDot( hWnd, hDC, 15*n + iAngle[n] )
 
  /*  Erase angle line  */
@@ -127,7 +138,9 @@
  calcArcs()
  EraseLines(hWnd, hDC)
  DrawCurve(hWnd, hDC)
- Sleep(1000)
+// Sleep(1000)
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+}
  }
 
  redraw(hWnd, hDC)
@@ -135,4 +148,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

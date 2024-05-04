@@ -16,7 +16,7 @@
  *      create and display the main program window.
  *
  ****************************************************************************/
-/*     {
+     {
  HWND  hWnd         // Main window handle.
 
  hInst = hInstance   // Store instance handle in our global variable
@@ -56,4 +56,4 @@
 
  return (true)              // We succeeded...
 
- } */
+ } 

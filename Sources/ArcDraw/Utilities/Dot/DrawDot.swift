@@ -9,7 +9,7 @@ import CoreGraphics
 func drawDot(dotIndex: Int) {
   var dotRadius: CGFloat = 3.0
 
-  /*
+  
 
   // Set fill color
   context.setFillColor(NSColor.black.cgColor)
@@ -36,10 +36,6 @@ path.addLine(to: CGPoint(x: gDotLoc[dotIndex].x, y: gDotLoc[dotIndex].y)) // Add
   //       hBrush = SelectObject(hDC, GetStockObject(WHITE_BRUSH)) // Return to normal brush
 
   //       ReleaseDC(hWnd, hDC)
-
-
-
-   */
 
   return
 }

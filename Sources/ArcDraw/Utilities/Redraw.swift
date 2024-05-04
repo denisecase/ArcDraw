@@ -5,9 +5,9 @@
  Handle redrawing of all the curves when updating.
  */
 
-/*    VOID  redraw(HWND  hWnd, HDC hDC)
+    func  redraw()
  {
- var      xL Int
+ var      xL: Int
  var      yT: Int
  var      xR: Int
  var      yB: Int
@@ -21,11 +21,11 @@
  var      x2: Int
  var      y1: Int
  var      y2: Int
- int      xCL;
- int      yCT;
- int      xCR;
- int      yCB;
- double  alpha12;
+ var      xCL: Int
+ var      yCT: Int
+ var      xCR: Int
+ var      yCB: Int
+ var      alpha12: Double
  var      x3: Int
  var      x4: Int
  var      y3: Int
@@ -59,7 +59,7 @@
  x1 = gDotLoc[i].x
  x2 = gDotLoc[i + 1].x
  y1 = gDotLoc[i].y
- y2 = gDotLoc[i + 1].;
+ y2 = gDotLoc[i + 1].y;
 
  if fabs(gR[i] - 15000.0) <= 0.001 || fabs(gR[i] - 16000.0) <= 0.001
  {
@@ -135,4 +135,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

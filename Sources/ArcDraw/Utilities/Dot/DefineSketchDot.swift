@@ -11,7 +11,7 @@
 
  Changes: loads dots in global array
  */
-/*     VOID  defineSketchDot(HWND  hWnd, HDC  hDC, CGPoint  posn)
+     func  defineSketchDot(CGPoint  posn)
  {
  var      dotIndex: Int
 
@@ -27,4 +27,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

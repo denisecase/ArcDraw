@@ -5,7 +5,7 @@
  Restore to previous condition of curve, adjust to get at overlapping dots,
  and reset menu item.
  */
-/*    VOID  UndoLastAndFindHiddenDot(HWND  hWnd)
+    func  UndoLastAndFindHiddenDot()
  {
  var    i: Int
  var    highDotNum: Int
@@ -240,4 +240,4 @@
  ReleaseDC(hWnd, hDC)
 
  return
- } */
+ } 

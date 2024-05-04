@@ -11,7 +11,7 @@
  */
 import CoreGraphics
 
-/*
+
 
 func addDotAfter(HWND  hWnd, HDC  hDC, LPARAM  lParam)
 {
@@ -180,4 +180,4 @@ return
   return
 }
 
-*/
+

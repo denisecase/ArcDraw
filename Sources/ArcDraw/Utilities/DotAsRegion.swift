@@ -12,7 +12,7 @@ func dotAsRegion(dotIndex: Int) {
   var dotCenter: CGPoint
   var dotRadius: CGFloat = 5.0
 
-  /*
+  
 
   let gDotRegion[dotIndex] = CGMutablePath()
   gDotRegion.addArc(center: dotCenter, radius: dotRadius, startAngle: 0.0, endAngle: 2 * .pi, clockwise: false)
@@ -22,7 +22,7 @@ func dotAsRegion(dotIndex: Int) {
 
 
 
-   */
+   
 
   return
   }
